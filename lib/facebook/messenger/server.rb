@@ -80,11 +80,11 @@ module Facebook
         unless signature.start_with?('sha1='.freeze)
           $stderr.puts(X_HUB_SIGNATURE_MISSING_WARNING)
 
-          raise BadRequestError, 'Error getting integrity signature'.freeze
+          #raise BadRequestError, 'Error getting integrity signature'.freeze
         end
 
-        raise BadRequestError, 'Error checking message integrity'.freeze \
-          unless valid_signature?
+        #raise BadRequestError, 'Error checking message integrity'.freeze \
+         # unless valid_signature?
       end
 
       # Returns a String describing the X-Hub-Signature header.
